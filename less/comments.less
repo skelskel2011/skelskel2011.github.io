@@ -1,0 +1,131 @@
+.comments {
+    overflow: hidden;
+    margin: 0 -20px;
+    padding: 25px 20px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+}
+    
+.comments-item {
+        
+    &__avatar {
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        overflow: hidden;
+    
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    &__info {
+        margin-left: 30px;
+        
+        h3 {
+            margin: 0;
+            float: left;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 700;
+            margin-right: 10px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        time {
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #666;
+        }
+        
+        p {
+            font-size: 14px;
+            color: #333;
+            line-height: 16px;
+            margin: 0;
+            clear: both;
+            margin-bottom: 15px;
+        }
+    }
+}
+            
+.comments-item__info-attachment {
+    min-height: 50px;
+    border-radius: 4px;
+    background: white;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    overflow: hidden;
+    
+    &-title {
+        width: 100px;
+        height: 50px;
+        font-size: 12px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #666;
+        text-align: center;
+        float: left;
+    }
+    
+    &.design {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+    }
+    
+    &.maket {
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        
+        .comments-item__info-attachment-title {
+            width: 71px;
+        }
+        
+        .comments-item__info-attachment-list {
+            margin-left: 71px;
+        }
+    }
+}
+    
+.comments-item__info-attachment-list {
+    margin-left: 100px;
+    padding: 10px 10px 10px 0;
+    
+    &.needs {
+        .comments-item__info-attachment-list__item {
+            border: 0;
+            padding: 8px 13px;
+            padding-right: 26px;
+        }
+    }
+}
+        
+.comments-item__info-attachment-list__item {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 6px 13px;
+    font-size: 14px;
+    line-height: 1;
+    height: 14px;
+    color: #384d76;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -8px;
+    }
+}

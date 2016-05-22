@@ -1,0 +1,118 @@
+.right-block {
+    width: 200px;
+    float: right;
+}
+
+.right-block__widget {
+    margin-bottom: 20px;
+    background: white;
+    
+    &-title {
+        height: 50px;
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 50px;
+        color: #4a4a4a;
+        font-weight: 100;
+        background: #f9f9f9;
+        margin: 0;
+    }
+    
+    icon {
+        float: right;
+    }
+}
+
+.right-block__widget-item {
+    overflow: hidden;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    
+    h4 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .btn {
+        color: #384d76;
+        font-size: 14px;
+        
+        .icon {
+            margin: 0;
+        }
+    }
+}
+
+.right-block__widget-documents {
+    margin: 0;
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #ddd;
+    
+    li {
+        position: relative;
+        list-style: none;
+        display: block;
+        padding-left: 25px;
+        font-size: 12px;
+        margin-bottom: 15px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        &:before {
+            content: '';
+            .icon();
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            margin-left: -8px;
+            background-size: 100%;
+        }
+    }
+    
+    &.accepted {
+        li {
+            color: #384d76;
+            
+            &:before {
+                background-image: url('../img/accepted.svg');
+            }
+        }
+    }
+    
+    &.needed {
+        li {
+            color: #333;
+            
+            &:before {
+                background: transparent;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #ddd;
+                margin-left: -4px;
+                border-radius: 8px;
+                
+            }
+        }
+    }
+    
+    &.canceled {
+        li {
+            color: #999;
+            
+            &:before {
+                content: 'x';
+                top: -1px;
+                background-image: transparent;
+                width: 7px;
+                height: 7px;   
+                margin-left: -4px;
+            }
+        }
+    }
+}
