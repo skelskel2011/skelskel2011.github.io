@@ -15,4 +15,17 @@ $(function() {
         $('.main-content-item__content').removeClass('active');
         $('.main-content-item__content').eq(index).addClass('active');
     });
+    
+    $('.main-header__search').on('click', function(e) {
+        
+        if ($(e.target).is('.main-header__search-text')) {
+            return false;
+        }
+        
+        if ($('.main-header__search-text').hasClass('active')) {
+            $('.main-header__search-text').removeClass('active');
+        } else {
+            $('.main-header__search-text').addClass('active');
+        }
+    });
 });

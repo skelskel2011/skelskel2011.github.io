@@ -20,9 +20,19 @@
             margin: 10px;
             border-top: 0;
         }
+        
+        .btn {
+            display: block;
+            width: 186px;
+            margin: 0 7px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
     }
     
     &-title {
+        position: relative;
         height: 50px;
         padding: 0 20px;
         font-size: 18px;
@@ -31,16 +41,13 @@
         font-weight: 100;
         background: #f9f9f9;
         margin: 0;
-    }
     
-    icon {
-        float: right;
-    }
-        
-    .btn {
-        display: block;
-        width: 186px;
-        margin: 0 7px;
+        .icon {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            right: 20px;
+        }
     }
 }
 
@@ -164,8 +171,8 @@
                 background: transparent;
                 width: 8px;
                 height: 8px;
-                border: 1px solid #ddd;
-                margin-left: -4px;
+                border: 1px solid #c2c2c2;
+                margin-left: -5px;
                 border-radius: 8px;
                 
             }

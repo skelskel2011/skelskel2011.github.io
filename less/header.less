@@ -74,6 +74,7 @@
         box-sizing: border-box;
         border-right: 1px solid #ddd;
         font-size: 18px;
+        font-weight: 700;
         line-height: 50px;
         text-align: center;
     }
@@ -101,5 +102,27 @@
             background: url('../img/search.svg');
             background-repeat: no-repeat;
         }
+    }
+}
+
+.main-header__search-text {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 0;
+    height: 50px;
+    line-height: 48px;
+    background: white;
+    color: #333;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.3s linear;
+    
+    &.active {
+        width: 300px;
+        border: 1px solid #ddd;
+        padding: 0 10px;
     }
 }
