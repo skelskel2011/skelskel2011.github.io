@@ -1,0 +1,46 @@
+.filters-block {
+    width: 100%;
+    height: 39px;
+    background: #f9f9f9;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    &.no-margin {
+        margin-bottom: 0;
+    }
+
+    &.top {
+        margin-top: -20px;
+    }
+
+    &__label {
+        float: left;
+        margin-left: 20px;
+        line-height: 39px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+        
+        &:after {
+            display:block;
+            content:attr(title);
+            font-weight:bold;
+            height:1px;
+            color:transparent;
+            overflow:hidden;
+            visibility:hidden;
+            margin-bottom:-1px;
+        }
+
+        &.mode {
+            cursor: pointer;
+
+            &:hover,
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
+}

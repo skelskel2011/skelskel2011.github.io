@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/ckeditor.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -91,7 +92,14 @@
             <div class="main-content-item">
                 <div class="main-content-item__content new active">
                     <h2 class="title">Баннер для стиральной машины SIEMENS i-Dos</h2>
-                    <img src="img/big.png" />
+                    <div class="main-content-item__content-img">
+                        <ul class="main-content-item__content-img-controls">
+                            <li class="img-controls__expand active"></li>
+                            <li class="img-controls__collapse">_</li>
+                            <li class="img-controls__full active"></li>
+                        </ul>
+                        <img src="img/big.png" />
+                    </div>
                 </div>
                 <div class="comments">
                     <div class="comments-item">
@@ -189,18 +197,97 @@
                 </div>
                 <span class="btn btn-big btn-green">Взять в работу</span>
             </div>
+            <div class="right-block__widget new">
+                <h3 class="right-block__widget-title">
+                    Опции
+                </h3>
+                <div class="right-block__widget-item">
+                    <div class="right-block__widget-item-info urgent">
+                        Срочное заключение
+                        <span>Выполняется в течении часа</span>
+                        <div class="right-block__widget-item-accept">
+                            Подключить - 300 Р
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-block__widget new">
+                <h3 class="right-block__widget-title">
+                    Таймер
+                </h3>
+                <div class="right-block__widget-item timer">
+                    <div class="right-block__widget-item-time">
+                        <span class="days">29</span>
+                        дней
+                    </div>
+                    <div class="right-block__widget-item-help">
+                        <a href="#">
+                            <i class="icon icon-question">?</i><br />
+                            Нужна помощь?
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-block__widget new">
+                <h3 class="right-block__widget-title">
+                    Заказ
+                    <span class="right">450 р</span>
+                </h3>
+                <div class="right-block__widget-item">
+                    <div class="right-block__widget-item-info active">
+                        Заключение с гарантией
+                        <span>
+                            Заключение, подписано экспертом-правоприменителем +Печать компании + отправка оригинала
+                        </span>
+                        <input id="i1" type="radio" />
+                        <label for="i1" class="right-block__widget-item-select">
+                            Выбрать <span class="right">100 р</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="right-block__widget-item cost">
+                    <span>Стоимость заказа: </span>
+                    <span class="price">600 р</span>
+                </div>
+                <span class="btn btn-big btn-green">Оплатить</span>
+            </div>
         </aside>
         
     </div>
     
-    <a href="#" class="conclusion">
+    <!--<a href="#" class="conclusion">
         <i class="icon icon-big icon-doc"></i>
         Заключение к заказу №54 
-    </a>
-       
-    <footer id="footer">
-        <div class="">
+    </a>-->
+
+    <div class="conclusion_list">
+        <i class="icon icon-big icon-doc"></i>
+        <span>Заключения <span class="conclusion_list-count right">3</span></span>
+        <a href="#"> Заключение №54</a>
+        <a href="#"> Заключение №54</a>
+        <a href="#"> Заключение №54</a>
+    </div>
+
+    <div class="conclusion-popup__wrapper active">
+    </div>
+    <div class="conclusion-popup active">
+        <div class="conclusion-popup__header">
+            <div class="conclusion-popup__header-btn right">
+                Свернуть
+            </div>
+            <span class="conclusion-popup__header-type">RTF</span>
+            <a href="#" class="conclusion-popup__header-download"></a>
+            <h1 class="conclusion-popup__header-title">Заключение к заказу №54 </h1>
         </div>
-    </footer>
+        <div class="conclusion-popup__content">
+            <textarea name="editor1" id="editor1">
+            </textarea>
+        </div>
+        <div class="conclusion-popup__footer">
+            <a href="#" class="btn btn-big btn-green">
+                Отправить клиенту
+            </a>
+        </div>
+    </div>
 </body>
 </html>

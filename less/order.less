@@ -1,0 +1,210 @@
+.order-list {
+    padding: 0;
+    margin: 0;
+    
+    li {
+        list-style: none;
+    }
+
+    &.in-progress {
+        .order-list__item-cell {
+            &:nth-child(6) {
+                width: 100px;
+            }
+        }
+    }
+
+    &.dalle {
+        .order-list__item {
+            width: calc(~'33.3333% - 1px');
+            margin-right: 1px;
+            background: white;
+            padding: 15px;
+            box-sizing: border-box;
+            float: left;
+            height: auto;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }        
+
+        .order-list__item-num {
+            float: left;
+        }
+
+        .order-list__item-option {
+            float: right;
+            margin-bottom: 15px;
+        }
+        .order-list__item-user {
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            img {
+                float: left;
+                width: 40px;
+                height: 40px;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+
+            &_seat {
+                display: block;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+                color: #666;
+                margin-top: 3px;
+            }
+
+            &_name {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+                color: #333;
+            }
+        }
+
+        .order-list__item-info {
+            width: 100%;
+            overflow: hidden;
+            clear: both;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #f9f9f9;
+            border-radius: 3px;
+            position: relative;
+
+            &-count {
+                width: 24px;
+                height: 20px;
+                border-top-right-radius: 3px;
+                border-bottom-left-radius: 3px;
+                background-color: #6ead39;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                text-align: center;
+                color: #ffffff;
+            }
+
+            &.bordered {
+                border: 1px solid #6ead39;
+            }
+
+            &_legend {
+                background: #fff;
+                padding: 16px;
+                height: 200px;
+                width: 100%;
+                border-radius: 3px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #333;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.order-list__item {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 1px;
+    background-color: white;
+    display: block;
+    cursor: pointer;
+    
+    &.header {
+        background-color: #f9f9f9;
+        height: 39px;
+    
+        &:hover {
+            background-color: #f9f9f9;
+        }
+    
+        .order-list__item-cell {
+            font-size: 12px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            line-height: 39px;  
+        
+            &:nth-child(3) {
+                width: 30px;
+                text-align: center;
+                padding-right: 10px;
+            }
+            
+            &:nth-child(4) {
+                width: 60px;
+            } 
+            
+            &:nth-child(5) {
+                width: 100px;
+            }
+            
+            &:nth-child(6) {
+                width: 100px;
+            }
+            
+            &:nth-child(7) {
+                width: 100px;
+            }
+            
+            &:nth-child(8) {
+                width: 100px;
+            }  
+        }
+    }
+    
+    &:hover {
+        background-color: #e5eef2;
+        
+        .option {
+            background: white;
+        }
+    }
+    
+    &-cell {
+        display: table-cell;
+        font-size: 12px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        line-height: 1.2;   
+        padding-left: 20px;
+        height: 46px;
+        vertical-align: middle;
+        
+        &:nth-child(1) {
+            width: 40px;
+        }
+        
+        &:nth-child(2) {
+            width: 60px;
+        } 
+        
+        &:nth-child(3) {
+            width: 100px;
+        }
+        
+        &:nth-child(4) {
+            width: 100px;
+        }
+        
+        &:nth-child(5) {
+            width: 100px;
+        }
+        
+        &:nth-child(6) {
+            width: 215px;
+        }
+    }
+}

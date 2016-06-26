@@ -28,4 +28,37 @@ $(function() {
             $('.main-header__search-text').addClass('active');
         }
     });
+
+    $('.conclusion_list').on('click', function(e) {
+
+        if ($(e.target).is('a')) {
+            return true;
+        }
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).css({
+                'height' : 50
+            });
+        } else {
+            $(this).addClass('active');
+            var $childrens = $(this).find('a');
+            var height = 0;
+            for (var i = 0; i < $childrens.length; i++) {
+                height += $childrens.eq(i).outerHeight(true);
+            }
+            height = height + 50;
+            $(this).css({
+                'height' : height
+            });
+        }
+    });
+
+    $('.conclusion-popup__header-btn').on('click', function() {
+        $('.conclusion-popup').removeClass('active');
+        $('.conclusion-popup__wrapper').removeClass('active');
+    });
+
+    CKEDITOR.replace( 'editor1' );
+    
 });

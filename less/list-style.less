@@ -1,0 +1,28 @@
+.list-type {
+    &__dalle,
+    &__list {
+        width: 40px;
+        height: 39px;
+        background-color: #f9f9f9;
+        position: relative;
+        float: right;
+        
+        &:hover,
+        &.active {
+            background-color: white;
+            
+            svg {
+                color: #384d76;
+            }
+        }
+        
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -7px;
+            margin-left: -7px;
+            color: #333;
+        }
+    }
+}
